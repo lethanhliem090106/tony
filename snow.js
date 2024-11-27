@@ -6,20 +6,21 @@
         const snowflake = document.createElement('div');
         snowflake.classList.add('snowflake');
         snowflake.textContent = '❄️';
-        snowflake.style.left = `${Math.random() * 100}vw`;
-        snowflake.style.animationDuration = `${Math.random() * 3 + 2}s`;
-        snowflake.style.opacity = Math.random();
-        snowflake.style.fontSize = `${Math.random() * 10 + 20}px`;
+        snowflake.style.left = `${Math.random() * 100}vw`; // Vị trí ngang ngẫu nhiên
+        snowflake.style.animationDuration = `${Math.random() * 3 + 5}s`; // Thời gian rơi ngẫu nhiên
+        snowflake.style.opacity = Math.random(); // Độ mờ ngẫu nhiên
+        snowflake.style.fontSize = `${Math.random() * 10 + 30}px`; // Kích thước ngẫu nhiên
 
         mainContainer.appendChild(snowflake);
         snowflakes.push(snowflake);
 
+        // Xóa bông tuyết sau khi nó rơi xuống
         setTimeout(() => {
             snowflake.remove();
             snowflakes.shift();
-        }, 5000);
+        }, (parseFloat(snowflake.style.animationDuration) * 1000)); // Xóa sau khi rơi xong
     }
 
+    // Tạo bông tuyết mới mỗi 200ms
     setInterval(createSnowflake, 200);
 })();
-

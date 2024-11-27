@@ -18,12 +18,12 @@ body {
     border-radius: 15px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     padding: 20px;
-    background-color: rgba(255, 255, 255, 0.8); /* Màu nền trắng mờ */
+    background-color: rgba(220, 244, 236, 0.8); /* Màu nền trắng mờ */
     z-index: 1;
 }
 
-.gift {
-    font-size: 5vw; /* Chiếm 1/20 khung hình */
+.gift-center {
+    font-size: 6vw; /* Chiếm 1/20 khung hình */
     cursor: pointer;
     animation: shake 0.5s infinite;
 }
@@ -51,14 +51,14 @@ body {
 .message {
     display: none; /* Ẩn thông điệp cho đến khi nhấn vào hộp quà */
     margin-top: 20px;
-    font-size: 3vw;
+    font-size: 1vw;
     color: #FF4500; /* Màu xanh dương */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .snowflake {
     position: absolute;
-    top: -10px; /* Bắt đầu từ trên cùng */
+    top: -5px; /* Bắt đầu từ trên cùng */
     user-select: none;
     pointer-events: none;
     z-index: 1000;
@@ -75,10 +75,10 @@ body {
 /* Tạo hiệu ứng rơi cho tuyết */
 @keyframes fall {
     0% {
-        transform: translateX(0) translateY(0);
+        transform: translateY(0); /* Bắt đầu từ trên */
     }
     100% {
-        transform: translateX(calc(-50% + 100vw)) translateY(100vh); /* Rơi từ trên xuống dưới */
+        transform: translateY(100vh); /* Rơi xuống dưới */
     }
 }
 
