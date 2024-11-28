@@ -1,6 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
-    background-image: url('D:/vs code present/img/background.jpg'); /* Đường dẫn hình ảnh */
+    font-family: Arial, sans-serif; /* Đường dẫn hình ảnh */
     background-size: 100%; /* Đảm bảo hình ảnh phủ kín toàn bộ */
     background-position: center; /* Canh giữa hình ảnh */
     background-repeat: no-repeat; /* Không lặp lại hình ảnh */
