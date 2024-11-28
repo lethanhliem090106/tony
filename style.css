@@ -1,6 +1,8 @@
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(to bottom, #000080, #87CEEB);
+    background: linear-gradient(rgba(255, 126, 95, 0.5), rgba(254, 180, 123, 0.5)), url('D:\vs code present\image'); /* Đường dẫn tới hình ảnh */
+    background-size: cover; /* Để hình ảnh phủ kín toàn bộ */
+    background-position: center; /* Canh giữa hình ảnh */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,16 +16,16 @@ body {
 .main-container {   
     text-align: center;
     position: relative;
-    border: 10px solid #8B0000; /* Viền màu đỏ đậm */
+    border: 10px solid #8B0000;
     border-radius: 15px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     padding: 20px;
-    background-color: rgba(220, 244, 236, 0.8); /* Màu nền trắng mờ */
+    background-color: rgba(220, 244, 236, 0.8);
     z-index: 1;
 }
 
 .gift-center {
-    font-size: 6vw; /* Chiếm 1/20 khung hình */
+    font-size: 8vw; /* Kích thước lớn hơn */
     cursor: pointer;
     animation: shake 0.5s infinite;
 }
@@ -36,9 +38,14 @@ body {
 
 .bear {
     position: relative;
-    font-size: 4vw; /* Kích thước gấu */
+    font-size: 6vw; /* Kích thước gấu lớn hơn */
     cursor: pointer;
-    color: #8B4513; /* Màu nâu */
+    color: #8B4513;
+    transition: transform 0.3s; /* Hiệu ứng chuyển động */
+}
+
+.bear:hover {
+    transform: scale(1.1); /* Phóng to khi hover */
 }
 
 .small-gift {
@@ -48,24 +55,41 @@ body {
     right: 0;
 }
 
+.message-container {
+    position: relative; /* Để thông điệp được định vị tương đối */
+    height: 30px; /* Chiều cao cố định để không làm ảnh hưởng đến bố cục */
+}
+
 .message {
-    display: none; /* Ẩn thông điệp cho đến khi nhấn vào hộp quà */
+    display: none;
+    position: absolute; /* Đặt vị trí tuyệt đối */
+    bottom: 0; /* Đặt vị trí bên dưới hộp quà */
+    left: 50%; /* Canh giữa theo chiều ngang */
+    transform: translateX(-50%); /* Đưa thông điệp về giữa */
+    font-size: 1vw; /* Kích thước chữ nhỏ hơn cho thông điệp bên trong hộp quà */
+    color: #4e52db;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    white-space: nowrap; /* Ngăn dòng chữ xuống dòng */
+}
+
+.message-center {
+    display: none;
     margin-top: 20px;
-    font-size: 1vw;
-    color: #FF4500; /* Màu xanh dương */
+    font-size: 3vw; /* Kích thước chữ lớn hơn cho thông điệp trung tâm */
+    color: #FF4500;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .snowflake {
     position: absolute;
-    top: -5px; /* Bắt đầu từ trên cùng */
+    top: -5px;
     user-select: none;
     pointer-events: none;
     z-index: 1000;
-    width: 10px; /* Kích thước tuyết */
-    height: 10px; /* Kích thước tuyết */
-    background-color: white; /* Màu tuyết */
-    border-radius: 50%; /* Hình tròn */
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
     opacity: 0.8;
     animation-name: fall;
     animation-timing-function: linear;
@@ -75,55 +99,20 @@ body {
 /* Tạo hiệu ứng rơi cho tuyết */
 @keyframes fall {
     0% {
-        transform: translateY(0); /* Bắt đầu từ trên */
+        transform: translateY(0);
     }
     100% {
-        transform: translateY(100vh); /* Rơi xuống dưới */
+        transform: translateY(100vh);
     }
 }
 
 /* Thêm một số tuyết rơi với độ trễ khác nhau */
-.snowflake:nth-child(1) {
-    left: 10%; 
-    animation-duration: 5s; 
-}
-
-.snowflake:nth-child(2) {
-    left: 20%; 
-    animation-duration: 6s; 
-}
-
-.snowflake:nth-child(3) {
-    left: 30%; 
-    animation-duration: 4s; 
-}
-
-.snowflake:nth-child(4) {
-    left: 40%; 
-    animation-duration: 7s; 
-}
-
-.snowflake:nth-child(5) {
-    left: 50%; 
-    animation-duration: 5.5s; 
-}
-
-.snowflake:nth-child(6) {
-    left: 60%; 
-    animation-duration: 6.5s; 
-}
-
-.snowflake:nth-child(7) {
-    left: 70%; 
-    animation-duration: 4.5s; 
-}
-
-.snowflake:nth-child(8) {
-    left: 80%; 
-    animation-duration: 7.5s; 
-}
-
-.snowflake:nth-child(9) {
-    left: 90%; 
-    animation-duration: 5.2s; 
-}
+.snowflake:nth-child(1) { left: 10%; animation-duration: 5s; }
+.snowflake:nth-child(2) { left: 20%; animation-duration: 6s; }
+.snowflake:nth-child(3) { left: 30%; animation-duration: 4s; }
+.snowflake:nth-child(4) { left: 40%; animation-duration: 7s; }
+.snowflake:nth-child(5) { left: 50%; animation-duration: 5.5s; }
+.snowflake:nth-child(6) { left: 60%; animation-duration: 6.5s; }
+.snowflake:nth-child(7) { left: 70%; animation-duration: 4.5s; }
+.snowflake:nth-child(8) { left: 80%; animation-duration: 7.5s; }
+.snowflake:nth 
