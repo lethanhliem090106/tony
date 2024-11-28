@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(rgba(255, 126, 95, 0.5), rgba(254, 180, 123, 0.5)), url('https://github.com/lethanhliem090106/tony/blob/master/be1d9f111a07f40f72c8465aabfaaf57.jpg'); /* Đường dẫn tới hình ảnh */
+    background: linear-gradient, url('be1d9f111a07f40f72c8465aabfaaf57.jpg'); /* Đường dẫn tới hình ảnh */
     background-size: cover; /* Để hình ảnh phủ kín toàn bộ */
     background-position: center; /* Canh giữa hình ảnh */
     display: flex;
