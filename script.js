@@ -7,7 +7,7 @@ function openBearGift(bearNumber) {
         1: "Chúc Vy \nmãi xinh đẹp!",
         2: "Chúc Vy \nluôn vui vẻ!",
         3: "Chúc Vy \nhọc tập thật tốt!",
-        4: "Chúc Vy \ncó người yêu!",
+        4: "Chúc Vy \nthi được A+ !",
         5: "Chúc Vy \nluôn hạnh phúc!", 
     };
 

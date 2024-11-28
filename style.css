@@ -1,6 +1,7 @@
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient, url('be1d9f111a07f40f72c8465aabfaaf57.jpg'); /* Đường dẫn tới hình ảnh */
+    background: linear-gradient; /* Đường dẫn tới hình ảnh */
+    background-image: url(https://images.pexels.com/photos/744969/pexels-photo-744969.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
     background-size: cover; /* Để hình ảnh phủ kín toàn bộ */
     background-position: center; /* Canh giữa hình ảnh */
     display: flex;
@@ -66,7 +67,7 @@ body {
     bottom: 0; /* Đặt vị trí bên dưới hộp quà */
     left: 50%; /* Canh giữa theo chiều ngang */
     transform: translateX(-50%); /* Đưa thông điệp về giữa */
-    font-size: 1vw; /* Kích thước chữ nhỏ hơn cho thông điệp bên trong hộp quà */
+    font-size: 1.2vw; /* Kích thước chữ nhỏ hơn cho thông điệp bên trong hộp quà */
     color: #4e52db;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     white-space: nowrap; /* Ngăn dòng chữ xuống dòng */
@@ -75,7 +76,7 @@ body {
 .message-center {
     display: none;
     margin-top: 20px;
-    font-size: 3vw; /* Kích thước chữ lớn hơn cho thông điệp trung tâm */
+    font-size: 3.5vw; /* Kích thước chữ lớn hơn cho thông điệp trung tâm */
     color: #FF4500;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
