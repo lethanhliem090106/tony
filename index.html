@@ -11,9 +11,6 @@
     <script src="snow.js" defer></script>
 </head>
 <body>
-    <audio autoplay loop>
-        <source src="D:\vs code present\mp3\happybirthday.mp3" type="audio/mpeg">
-    </audio>
     <div class="snowflake"></div>
     <div class="main-container">
         <div style="position: fixed; top: 10px; left: 10px;"> 
@@ -36,11 +33,13 @@
                 <i class="fab fa-facebook fa-2x"></i> 
             </a> 
         </div>
-        <div class="snow"></div>
-        <div class="gift-box"></div>
-        <div class="gift-center" id="message-center" onclick="showMessage()">
-            🎁
+        <div class="cake">
+            🎂 
+            <div class="message-container">
+                <div class="message">Chúc mừng sinh nhật!</div>
+            </div>
         </div>
+        <div class="birthday-wish">Sinh nhật vui vẻ!</div>
         <div class="bears">
             <div class="bear" onclick="openBearGift(1)">
                 🧸
@@ -79,8 +78,7 @@
             </div>
         </div>
         <div class="message-center" id="message">Happy Birthday Tuyết Vy!</div>
-        <div id="countdown"></div> <!-- Thêm đồng hồ đếm ngược -->
+        <div id="countdown"></div>
     </div>
-    <audio id="click-sound" src="path_to_sound.mp3"></audio> <!-- Thêm âm thanh -->
 </body>
 </html>

@@ -40,7 +40,7 @@ body {
     border-radius: 15px;
     animation: border-pulse 2s infinite;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-    padding: 20px;
+    padding: 10px 20px 10px 20px;
     background-color: rgba(220, 244, 236, 0.8);
     z-index: 1;
 }
@@ -51,16 +51,20 @@ body {
     100% { border-color: #cb0d0d; }
 }
 
-.gift-center {
-    font-size: 8vw; /* Kích thước lớn hơn */
-    cursor: pointer;
-    animation: shake 0.5s infinite;
+.cake {
+    font-size: 8vw; /* Kích thước lớn hơn cho bánh kem */
+    text-align: center; /* Canh giữa */
+    margin: 1px 0/* Khoảng cách trên và dưới */
 }
-
+.birthday-wish {
+    font-size: 4vw;
+    color: #FF4500;
+    margin-top: 1px;
+}
 .bears {
     display: flex;
     justify-content: space-around;
-    margin-top: 20px;
+    margin-top: 5px;
 }
 
 .bear {
@@ -78,8 +82,10 @@ body {
 .small-gift {
     font-size: 2vw;
     position: absolute;
-    bottom: 0;
-    right: 0;
+    bottom: 0; /* Đặt vị trí bên dưới con gấu */
+    left: 50%; /* Canh giữa */
+    transform: translateX(-50%); /* Đưa hộp quà về giữa */
+    cursor: pointer; /* Thay đổi con trỏ khi hover */
 }
 
 .message-container {
@@ -90,7 +96,7 @@ body {
 .message {
     display: none;
     position: absolute; /* Đặt vị trí tuyệt đối */
-    bottom: 0; /* Đặt vị trí bên dưới hộp quà */
+    bottom: -30px; /* Đặt vị trí bên dưới hộp quà */
     left: 50%; /* Canh giữa theo chiều ngang */
     transform: translateX(-50%); /* Đưa thông điệp về giữa */
     font-size: 1.2vw; /* Kích thước chữ nhỏ hơn cho thông điệp bên trong hộp quà */
