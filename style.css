@@ -1,8 +1,8 @@
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(rgba(255, 126, 95, 0.5), rgba(254, 180, 123, 0.5)), url('D:\vs code present\image'); /* Đường dẫn tới hình ảnh */
-    background-size: cover; /* Để hình ảnh phủ kín toàn bộ */
-    background-position: center; /* Canh giữa hình ảnh */
+    background-image: url('https://images.pexels.com/photos/744969/pexels-photo-744969.jpeg');
+    background-size: cover;
+    background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,28 +12,59 @@ body {
     position: relative;
     z-index: 0;
 }
+.fab {
+    color: #1DB954; /* Màu cho Spotify */
+    margin-left: 30px;
+    margin-top: 30px;
+} 
+.fa-youtube { 
+    color: #FF0000; /* Màu cho YouTube */
+    margin-right: 30px;
+    margin-top: 30px;  
+} 
+.fa-tiktok { 
+    color: #010101; /* Màu cho TikTok */
+    margin-left: 30px;
+    margin-bottom: 30px;
+}
+.fa-facebook { 
+    color: #4267B2; /* Màu cho Facebook */
+    margin-right: 30px;
+    margin-bottom: 30px;
+}
 
 .main-container {   
     text-align: center;
     position: relative;
     border: 10px solid #8B0000;
     border-radius: 15px;
+    animation: border-pulse 2s infinite;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-    padding: 20px;
+    padding: 10px 20px 10px 20px;
     background-color: rgba(220, 244, 236, 0.8);
     z-index: 1;
 }
 
-.gift-center {
-    font-size: 8vw; /* Kích thước lớn hơn */
-    cursor: pointer;
-    animation: shake 0.5s infinite;
+@keyframes border-pulse {
+    0% { border-color: #f66e0d; }
+    50% { border-color: #dc4411; }
+    100% { border-color: #cb0d0d; }
 }
 
+.cake {
+    font-size: 8vw; /* Kích thước lớn hơn cho bánh kem */
+    text-align: center; /* Canh giữa */
+    margin: 1px 0/* Khoảng cách trên và dưới */
+}
+.birthday-wish {
+    font-size: 4vw;
+    color: #FF4500;
+    margin-top: 1px;
+}
 .bears {
     display: flex;
     justify-content: space-around;
-    margin-top: 20px;
+    margin-top: 5px;
 }
 
 .bear {
@@ -51,8 +82,10 @@ body {
 .small-gift {
     font-size: 2vw;
     position: absolute;
-    bottom: 0;
-    right: 0;
+    bottom: 0; /* Đặt vị trí bên dưới con gấu */
+    left: 50%; /* Canh giữa */
+    transform: translateX(-50%); /* Đưa hộp quà về giữa */
+    cursor: pointer; /* Thay đổi con trỏ khi hover */
 }
 
 .message-container {
@@ -63,10 +96,10 @@ body {
 .message {
     display: none;
     position: absolute; /* Đặt vị trí tuyệt đối */
-    bottom: 0; /* Đặt vị trí bên dưới hộp quà */
+    bottom: -30px; /* Đặt vị trí bên dưới hộp quà */
     left: 50%; /* Canh giữa theo chiều ngang */
     transform: translateX(-50%); /* Đưa thông điệp về giữa */
-    font-size: 1vw; /* Kích thước chữ nhỏ hơn cho thông điệp bên trong hộp quà */
+    font-size: 1.2vw; /* Kích thước chữ nhỏ hơn cho thông điệp bên trong hộp quà */
     color: #4e52db;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     white-space: nowrap; /* Ngăn dòng chữ xuống dòng */
@@ -75,7 +108,7 @@ body {
 .message-center {
     display: none;
     margin-top: 20px;
-    font-size: 3vw; /* Kích thước chữ lớn hơn cho thông điệp trung tâm */
+    font-size: 3.5vw; /* Kích thước chữ lớn hơn cho thông điệp trung tâm */
     color: #FF4500;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
@@ -96,6 +129,14 @@ body {
     animation-iteration-count: infinite;
 }
 
+@keyframes shake {
+    0% { transform: translate(0); }
+    25% { transform: translate(-5px, 0); }
+    50% { transform: translate(5px, 0); }
+    75% { transform: translate(-5px, 0); }
+    100% { transform: translate(0); }
+}
+
 /* Tạo hiệu ứng rơi cho tuyết */
 @keyframes fall {
     0% {
@@ -113,5 +154,14 @@ body {
 .snowflake:nth-child(4) { left: 40%; animation-duration: 7s; }
 .snowflake:nth-child(5) { left: 50%; animation-duration: 5.5s; }
 .snowflake:nth-child(6) { left: 60%; animation-duration: 6.5s; }
-.snowflake:nth-child(7) { left: 70%; animation-duration: 4.5s; }
-.snowflake:nth-child(8) { left: 80%; animation-duration: 7.5s; }
+.snowflake:nth-child(7) { left: 70%; animation-duration: 7.5s; }
+.snowflake:nth-child(8) { left: 80%; animation-duration: 8.5s; }
+
+/* Thêm kiểu cho đồng hồ đếm ngược */
+#countdown {
+    margin-top: 20px;
+    font-size: 3vw; /* Kích thước chữ cho đồng hồ đếm ngược */
+    color: #FF4500;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    display: block; /* Đảm bảo hiển thị đồng hồ đếm ngược */
+}
