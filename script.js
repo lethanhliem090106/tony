@@ -1,6 +1,11 @@
+const sound = document.getElementById('click-sound');
+
 function showMessage() {
     const messageElement = document.getElementById('message');
     
+    // Phát âm thanh khi nhấn
+    sound.play();
+
     // Kiểm tra xem thông điệp đã hiển thị chưa
     if (messageElement.style.display === 'block') {
         messageElement.style.display = 'none'; // Ẩn thông điệp
@@ -28,3 +33,26 @@ function openBearGift(bearNumber) {
         messageElement.style.display = 'block'; // Hiển thị thông điệp
     }
 }
+
+function startCountdown() {
+    const countDownDate = new Date("November 30, 2024 00:00:00").getTime();
+    const x = setInterval(function() {
+        const now = new Date().getTime();
+        const distance = countDownDate - now;
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById("countdown").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+
+        if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("countdown").innerHTML = "SINH NHẬT VUI VẺ";
+        }
+    }, 1000);
+}
+
+// Bắt đầu đếm ngược khi trang tải
+window.onload = startCountdown;
