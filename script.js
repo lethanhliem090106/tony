@@ -1,5 +1,12 @@
 function showMessage() {
-    document.getElementById('message').style.display = 'block';
+    const messageElement = document.getElementById('message');
+    
+    // Kiểm tra xem thông điệp đã hiển thị chưa
+    if (messageElement.style.display === 'block') {
+        messageElement.style.display = 'none'; // Ẩn thông điệp
+    } else {
+        messageElement.style.display = 'block'; // Hiển thị thông điệp
+    }
 }
 
 function openBearGift(bearNumber) {
@@ -12,6 +19,12 @@ function openBearGift(bearNumber) {
     };
 
     const messageElement = document.getElementById(`message${bearNumber}`);
-    messageElement.innerText = messages[bearNumber];
-    messageElement.style.display = 'block'; // Hiển thị thông điệp
+    
+    // Kiểm tra xem thông điệp đã hiển thị chưa
+    if (messageElement.style.display === 'block') {
+        messageElement.style.display = 'none'; // Ẩn thông điệp
+    } else {
+        messageElement.innerText = messages[bearNumber];
+        messageElement.style.display = 'block'; // Hiển thị thông điệp
+    }
 }

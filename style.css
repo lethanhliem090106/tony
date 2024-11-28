@@ -12,15 +12,43 @@ body {
     position: relative;
     z-index: 0;
 }
+.fab { color: #1DB954; /* Màu cho Spotify */
+    margin-left: 30px;
+    margin-top: 30px;
+} 
+.fa-youtube { color: #FF0000; /* Màu cho YouTube */
+    margin-right: 30px;
+    margin-top: 30px;  
+} 
+.fa-tiktok { color: #010101; /* Màu cho TikTok (hoặc bất kỳ màu nào bạn thích) */ 
+    margin-left: 30px;
+    margin-bottom: 30px;
+}
+.fa-facebook { color: #4267B2; /* Màu cho Facebook */
+    margin-right: 30px;
+    margin-bottom: 30px;
+}
 .main-container {   
     text-align: center;
     position: relative;
     border: 10px solid #8B0000;
     border-radius: 15px;
+    animation: border-pulse 2s infinite;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     padding: 20px;
     background-color: rgba(220, 244, 236, 0.8);
     z-index: 1;
+}
+@keyframes border-pulse {
+    0% {
+        border-color: #f66e0d;
+    }
+    50% {
+        border-color: #dc4411;
+    }
+    100% {
+        border-color: #cb0d0d;
+    }
 }
 
 .gift-center {
@@ -95,6 +123,13 @@ body {
     animation-iteration-count: infinite;
 }
 
+@keyframes shake {
+    0% { transform: translate(0); }
+    25% { transform: translate(-5px, 0); }
+    50% { transform: translate(5px, 0); }
+    75% { transform: translate(-5px, 0); }
+    100% { transform: translate(0); }
+}
 /* Tạo hiệu ứng rơi cho tuyết */
 @keyframes fall {
     0% {
