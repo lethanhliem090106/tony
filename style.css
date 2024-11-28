@@ -1,17 +1,17 @@
 body {
-    font-family: Arial, sans-serif; /* Đường dẫn hình ảnh */
-    background-size: 100%; /* Đảm bảo hình ảnh phủ kín toàn bộ */
+    font-family: Arial, sans-serif;
+    background-image: url('https://images.pexels.com/photos/744969/pexels-photo-744969.jpeg'); /* Đường dẫn tới hình ảnh */
+    background-size: cover; /* Để hình ảnh phủ kín toàn bộ */
     background-position: center; /* Canh giữa hình ảnh */
-    background-repeat: no-repeat; /* Không lặp lại hình ảnh */
-    background-attachment: fixed; /* Hình ảnh sẽ không cuộn */
-    height: 100vh; /* Chiều cao 100% của viewport */
-    width: 100vw; /* Chiều rộng 100% của viewport */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
     margin: 0;
     overflow: hidden;
     position: relative;
-    z-index: 0; /* Đặt z-index thấp để nó ở phía sau */
+    z-index: 0;
 }
-
 .main-container {   
     text-align: center;
     position: relative;
