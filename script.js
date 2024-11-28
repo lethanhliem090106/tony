@@ -49,10 +49,8 @@ function startCountdown() {
 
         if (distance < 0) {
             clearInterval(x);
-            document.getElementById("countdown").innerHTML = "SINH NHẬT VUI VẺ";
+            document.getElementById("countdown").innerHTML = "EXPIRED";
         }
     }, 1000);
 }
 
-// Bắt đầu đếm ngược khi trang tải
-window.onload = startCountdown;
