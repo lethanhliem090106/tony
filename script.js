@@ -39,7 +39,7 @@ document.getElementById('message').innerText = "Happy Birthday Tuyết Vy!";
 
             if (distance < 0) {
                 clearInterval(x);
-                countdownElement.innerHTML = "EXPIRED";
+                countdownElement.innerHTML = "Tuổi mới thành công 8386";
             }
         }, 1000);
     }
