@@ -6,82 +6,118 @@
     <title>Happy Birthday!</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script src="script.js" defer></script>
     <script src="snow.js" defer></script>
 </head>
 <body>
-    <audio autoplay> 
-        <source src="D:\vs code present\music\happy-birthday-to-you-piano-version-13976.mp3" type="audio/mpeg"> 
-    </audio>
-    <div class="snowflake"></div>
-    <div class="main-container">
-        <div style="position: fixed; top: 10px; left: 10px;"> 
-            <a href="https://open.spotify.com" target="_blank"> 
-                <i class="fab fa-spotify fa-2x"></i> 
-            </a> 
-        </div>
-        <div style="position: fixed; top: 10px; right: 10px;"> 
-            <a href="https://www.youtube.com" target="_blank"> 
-                <i class="fab fa-youtube fa-2x"></i> 
-            </a> 
-        </div>
-        <div style="position: fixed; bottom: 10px; left: 10px;"> 
-            <a href="https://www.tiktok.com" target="_blank"> 
-                <i class="fab fa-tiktok fa-2x"></i> 
-            </a> 
-        </div>
-        <div style="position: fixed; bottom: 10px; right: 10px;"> 
-            <a href="https://www.facebook.com/profile.php?id=100040479977533" target="_blank"> 
-                <i class="fab fa-facebook fa-2x"></i> 
-            </a> 
-        </div>
-        <div class="cake">
-            🎂 
-            <div class="message-container">
-                <div class="message">Chúc mừng sinh nhật!</div>
+    <header>
+        <h1>Chúc mừng sinh nhật!</h1>
+    </header>
+
+    <main>
+        <audio id="player" autoplay loop>
+            <source src="sound.mp3" type="audio/mp3">
+            Trình duyệt của bạn không hỗ trợ phần tử âm thanh.
+        </audio>
+        <div class="image-container"> 
+            <div class="top-images">
+                <img src="tlinh.jpg" alt="Hình ảnh 1"> 
+                <img src="cattuong.jpg" alt="Hình ảnh 2"> 
+                <img src="amn.jpg" alt="Hình ảnh 3"> 
+                <img src="mit.jpg" alt="Hình ảnh 4"> 
+                <img src="athu.jpg" alt="Hình ảnh 5"> 
+                <img src="tdoanh.jpg" alt="Hình ảnh 6"> 
             </div>
-        </div>
-        <div class="birthday-wish">Sinh nhật vui vẻ!</div>
-        <div class="bears">
-            <div class="bear" onclick="openBearGift(1)">
-                🧸
-                <div class="small-gift">🎁</div>
-                <div class="message-container">
-                    <div class="message" id="message1"></div>
+            <div class="side-images left-images">
+                <img src="by.png" alt="Hình ảnh 7"> 
+                <img src="thai.jpg" alt="Hình ảnh 8"> 
+                <img src="chinh.jpg" alt="Hình ảnh 9"> 
+            </div>
+            <div class="main-container">
+                <div style="position: fixed; top: 10px; left: 10px;"> 
+                    <a href="https://open.spotify.com" target="_blank"> 
+                        <i class="fab fa-spotify fa-2x"></i> 
+                    </a> 
                 </div>
-            </div>
-            <div class="bear" onclick="openBearGift(2)">
-                🧸
-                <div class="small-gift">🎁</div>
-                <div class="message-container">
-                    <div class="message" id="message2"></div>
+                <div style="position: fixed; top: 10px; right: 10px;"> 
+                    <a href="https://www.youtube.com" target="_blank"> 
+                        <i class="fab fa-youtube fa-2x"></i> 
+                    </a> 
                 </div>
-            </div>
-            <div class="bear" onclick="openBearGift(3)">
-                🧸
-                <div class="small-gift">🎁</div>
-                <div class="message-container">
-                    <div class="message" id="message3"></div>
+                <div style="position: fixed; bottom: 10px; left: 10px;"> 
+                    <a href="https://www.tiktok.com" target="_blank"> 
+                        <i class="fab fa-tiktok fa-2x"></i> 
+                    </a> 
                 </div>
-            </div>
-            <div class="bear" onclick="openBearGift(4)">
-                🧸
-                <div class="small-gift">🎁</div>
-                <div class="message-container">
-                    <div class="message" id="message4"></div>
+                <div style="position: fixed; bottom: 10px; right: 10px;"> 
+                    <a href="https://www.facebook.com/profile.php?id=100040479977533" target="_blank"> 
+                        <i class="fab fa-facebook fa-2x"></i> 
+                    </a> 
                 </div>
-            </div>
-            <div class="bear" onclick="openBearGift(5)">
-                🧸
-                <div class="small-gift">🎁</div>
-                <div class="message-container">
-                    <div class="message" id="message5"></div>
+                <div class="center-content">
+                    <div class="center-image">
+                        <img src="TVy.jpg" alt="Hình ảnh trung tâm" class="main-image">
+                    </div>
+                    <div class="cake">
+                        🎂 
+                        <div class="message-container">
+                            <div class="message">Chúc mừng sinh nhật!</div>
+                        </div>
+                    </div>
                 </div>
+                <div class="birthday-wish">Sinh nhật vui vẻ!</div>
+                <div class="bears">
+                    <div class="bear" onclick="openBearGift(1)">
+                        🧸
+                        <div class="small-gift">🎁</div>
+                        <div class="message-container">
+                            <div class="message" id="message1"></div>
+                        </div>
+                    </div>
+                    <div class="bear" onclick="openBearGift(2)">
+                        🧸
+                        <div class="small-gift">🎁</div>
+                        <div class="message-container">
+                            <div class="message" id="message2"></div>
+                        </div>
+                    </div>
+                    <div class="bear" onclick="openBearGift(3)">
+                        🧸
+                        <div class="small-gift">🎁</div>
+                        <div class="message-container">
+                            <div class="message" id="message3"></div>
+                        </div>
+                    </div>
+                    <div class="bear" onclick="openBearGift(4)">
+                        🧸
+                        <div class="small-gift">🎁</div>
+                        <div class="message-container">
+                            <div class="message" id="message4"></div>
+                        </div>
+                    </div>
+                    <div class="bear" onclick="openBearGift(5)">
+                        🧸
+                        <div class="small-gift">🎁</div>
+                        <div class="message-container">
+                            <div class="message" id="message5"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="message-center" id="message">Happy Birthday Tuyết Vy!</div>
+                <div id="countdown"></div>
+            </div>
+            <div class="side-images right-images">
+                <img src="mon.jpg" alt="Hình ảnh 10"> 
+                <img src="huy.jpg" alt="Hình ảnh 11"> 
+                <img src="tri.jpg" alt="Hình ảnh 12"> 
             </div>
         </div>
-        <div class="message-center" id="message">Happy Birthday Tuyết Vy!</div>
-        <div id="countdown"></div>
-    </div>
+    </main>
+
+    <footer>
+        <p>© 2024 Sinh Nhật Vui Vẻ!</p>
+    </footer>
 </body>
 </html>

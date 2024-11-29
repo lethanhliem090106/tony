@@ -1,6 +1,7 @@
 (function() {
     const snowflakes = [];
     const mainContainer = document.querySelector('.main-container');
+    let lastSnowflakeTime = 0;
 
     function createSnowflake() {
         const snowflake = document.createElement('div');
@@ -21,6 +22,23 @@
         }, (parseFloat(snowflake.style.animationDuration) * 1000)); // Xóa sau khi rơi xong
     }
 
-    // Tạo bông tuyết mới mỗi 200ms
-    setInterval(createSnowflake, 200);
+    function animateSnowflakes(timestamp) {
+        if (timestamp - lastSnowflakeTime > 200) { // Tạo bông tuyết mới mỗi 200ms
+            createSnowflake();
+            lastSnowflakeTime = timestamp;
+        }
+
+        snowflakes.forEach(snowflake => {
+            const top = parseFloat(getComputedStyle(snowflake).top);
+            if (top > window.innerHeight) {
+                snowflake.remove();
+                snowflakes.shift();
+            }
+        });
+
+        requestAnimationFrame(animateSnowflakes);
+    }
+
+    // Khởi động animation
+    requestAnimationFrame(animateSnowflakes);
 })();
